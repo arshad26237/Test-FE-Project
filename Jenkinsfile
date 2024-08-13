@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy your built Angular project to your server or hosting service
-                sh 'scp -r /var/lib/jenkins/workspace/dist/* root@192.168.50.2:/var/www/html/'
+                sh 'scp -r /var/lib/jenkins/workspace/my-FE-project-01/dist/* root@192.168.50.2:/var/www/html/'
             }
         }
     }
