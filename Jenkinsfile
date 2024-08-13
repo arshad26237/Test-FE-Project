@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy your built Angular project to your server or hosting service
-                sh '''sshpass -p '12345' scp -r /var/lib/jenkins/workspace/my-FE-project/dist/* node@172.27.55.78:/var/www/html/'''
+                sh '''sshpass -p '12345' scp -r /var/lib/jenkins/workspace/my-FE-project/dist/hello-world/browser/* node@172.27.55.78:/var/www/html/'''
             }
         }
     }
