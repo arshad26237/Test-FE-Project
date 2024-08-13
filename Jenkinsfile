@@ -8,7 +8,7 @@ pipeline {
                 // Install Node.js and npm if necessary
                 sh 'npm install --force'
                 // Install Angular CLI
-                sh 'npm install -g @angular/cli'
+                #sh 'npm install -g @angular/cli'
             }
         }
         
@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy your built Angular project to your server or hosting service
-                sh 'scp -r /var/lib/jenkins/workspace/my-FE-project-01/dist/* root@192.168.50.2:/var/www/html/'
+                sh '''sshpass -p '12345' scp -r /var/lib/jenkins/workspace/my-FE-project/dist/* node@192.168.50.2:/var/www/html/'''
             }
         }
     }
