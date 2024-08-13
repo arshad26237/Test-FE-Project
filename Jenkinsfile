@@ -7,8 +7,7 @@ pipeline {
             steps {
                 // Install Node.js and npm if necessary
                 sh 'npm install --force'
-                // Install Angular CLI
-                #sh 'npm install -g @angular/cli'
+          
             }
         }
         
